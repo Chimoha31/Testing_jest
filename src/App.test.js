@@ -5,7 +5,8 @@ import App from './App';
 test('renders learn react link', () => {
   // <App />をテストしていこう！という意。
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
+  // "(/react/)の”/”は、大文字でも小文字でもどちらでもいいという意。"
+  const linkElement = screen.getByText(/react/i);
   // Textのleran reactがtobeinthedocument=(documentの中に存在しているか)書かれているかを検査
   expect(linkElement).toBeInTheDocument();
 });
